@@ -25,6 +25,22 @@ body {
     cursor: pointer;
 }
 
+.nav-item:last-child{
+    display: none;
+}
+
+body.mosaic .nav-item:last-child{
+    display: block;
+    margin: 0;
+}
+
+
+body.mosaic .nav-item:first-child{
+    display: none;
+}
+
+
+
 .nav-item:hover{
     background-color: gray;
 }
