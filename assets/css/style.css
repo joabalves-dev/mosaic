@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+}
+
+.nav-item{
+    list-style: none;
+    padding: 1em 2em;
+    background-color: rgba(128, 128, 128, 0.452);
+    border-radius: 0.3em;
+    transition: background-color 0.4s;
+    cursor: pointer;
+}
+
+.nav-item:hover{
+    background-color: gray;
+}
+
+.nav-item:last-child{
+    margin-left: 0.5em;
+}
+
+section {
+  width: 768px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+section .content {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: min-content auto;
+  grid-auto-flow: dense;
+  gap: 10px;
+}
+
+.item {
+  background-color: orangered;
+  width: 100%;
+  height: 10em;
+}
+
+.content.mosaic .item{
+    height: 100%;
+}
+
+.content.mosaic .item.large1 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.content.mosaic .item.large2 {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.content.mosaic .item.large3 {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.content.mosaic .item.large4 {
+  grid-column: span 2;
+  grid-row: span 3;
+}
